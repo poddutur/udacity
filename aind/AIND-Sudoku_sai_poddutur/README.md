@@ -3,11 +3,12 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: 
+A: According to the logic of the sudoku problem, if a situation arises where there are two squares/boxes in the same unit containing "same" and "only" two possible digits, then we can infer that other boxes cannot have these digits as the these two digits will be shared among these two squares/boxes. Hence we can eliminate these two digits from possibility set of other squares/boxes.  
+Similarly this can be extended to 3 squares in the same unit containing same 3 elements or more generally 'x' squares containing same 'x' elements, thereby we can eliminate these elements from the possibility set of other squares in the same unit.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: We added an additional constraint that the two diagonals cannot have a digit repeated (1-9 in the 9 boxes). As before we expressed this by considering each diagonal as a unit in diagonal units which we appended to the other units. So when we are checking for unit constraints, thus diagonal is also considered. 
 
 ### Install
 
